@@ -39,6 +39,7 @@ p {
   margin-top: 3.5vh;
   margin-bottom: 3.5vh;
  
+ 
 }
 .flex-container__parrafo--rojo {
   color: var(--color-resaltado);
@@ -84,6 +85,7 @@ a {
     font-size: 28px;
     font-family: var(--fuente-titulos);
     font-weight: 500;
+   color: var(--fuente-parrafos);
   }
   
 /*Estilos generales - zona cabecera*/
