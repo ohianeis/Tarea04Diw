@@ -1,0 +1,299 @@
+/*Importación fuentes google fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap");
+
+/*Declaración variables*/
+:root {
+  --background-color: black;
+  --fuente-titulos: "Noto Serif Georgian", serif;
+  --fuente-parrafos: "PT Serif", serif;
+  --color-resaltado: #ff1616;
+  --text-color: #444444;
+  --text-color-dos: #ffffff;
+
+}
+
+/*reseteo html para navegadores*/
+html,body,div,span,applet,object,iframe,h1,
+h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,
+em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,
+details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*estilos generales*/
+* {
+  line-height: 1.5;
+}
+p {
+  font-size: 16px;
+  color: var(--text-color);
+  font-family: var(--fuente-parrafos);
+  margin-top: 3.5vh;
+  margin-bottom: 3.5vh;
+ 
+}
+.flex-container__parrafo--rojo {
+  color: var(--color-resaltado);
+}
+/*le doy ancho a todo el contenido menos cabecera y margen*/
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+/*le doy ancho segun pantalla para ello vw y margen auto (poner centrado) para ser responsive y todo contenido principal quede centrado*/
+main {
+  width: 60vw;
+  margin: auto;
+}
+
+.flex-container__parrafo--cursiva {
+  font-style: italic;
+}
+.flex-container__parrafo--negrita {
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  text-decoration-color: var(--color-resaltado);
+  -moz-text-decoration-color: var(--color-resaltado);
+}
+.flex-container__listado {
+  align-self: center;
+  width: 85%;
+}
+.flex-container__listado ul{
+     font-family: var(--fuente-parrafos);
+    font-size: 16px;
+    color: var(--text-color);
+    margin-left: 3vh;
+}
+.flex-container__titulo {
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+    font-weight: 500;
+  }
+  
+/*Estilos generales - zona cabecera*/
+
+/*secciones--cabecera le hago contenedor flexible para tener mas control en los hijos*/
+#cabecera {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+  padding-top: 4vh;
+  padding-bottom: 2vh;
+}
+#cabecera__img {
+  width: 5em;
+}
+
+
+/*margin entre imagen y menu, display en bloque quito decoracion,*/
+#cabecera__menuItems li {
+  margin-top: 1vh;
+
+  list-style: none;
+  color: var(--text-color-dos);
+  padding: 0.7vh;
+  box-shadow: 1px 1px 1px 1px rgba(240, 229, 229, 0.5);
+}
+.cabecera__menuItems--resaltado{
+    font-style: italic;
+    font-weight: 700;
+}
+
+#cabecera__menuItems li:hover {
+  border: 3px solid var(--color-resaltado);
+  box-shadow: 1px 1px 1px 1px var(--color-resaltado);
+  transform: scale(
+    1.25
+  ); /*transformo escala le hago mas grande al pasar encima*/
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+}
+#cabecera__menuItems li a {
+  color: var(--text-color-dos);
+  padding: 1px;
+}
+#cabecera__menu {
+  margin-bottom: 3vh;
+}
+
+/* Estilos generales - zona footer*/
+
+footer {
+    background-color: var(--background-color);
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer__parrafo {
+    color: var(--text-color-dos);
+   
+  }
+
+/*Página index.html*/
+
+/*control imagenes y video*/
+/*se amplia o reduce segun ancho de su padre*/
+.flex-container__img {
+  width: 100%; /*igual de ancho que su elemento padre*/
+  margin-top: 5vh;
+}
+
+.flex-container__video {
+  /*le doy flex para jugar con el texto de la foto no he podido ponerlo debajo solo encima*/
+
+  /* margin: 6vh calc(40vw/4) 6vh calc(40vw/4);/*calcula margen segun ancho pantalla vw*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+
+  padding-bottom: 40.25%;
+  height: 0;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 2vh;
+}
+
+.flex-container__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*estilizando contenido*/
+
+/*zona desirée gomez ....*/
+.flex-container__tituloPagina {
+    margin-left: 2vw;
+    font-family: var(--fuente-titulos);
+    font-weight: 500;
+    font-size: 28px;
+    color: #393939;
+    margin-bottom: 4vh;
+  }
+.flex-container__parrafo--margen {
+  margin: 0;
+}
+.flex-container__pie-imagen {
+  align-self: flex-end;
+  margin: 0;
+  font-size: 10px;
+}
+
+
+.flex-container__parrafo--centrado {
+  background-color: #eeeeee;
+  font-size: 10px;
+}
+
+/*autora*/
+.flex-container__autora {
+  align-self: center;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+}
+
+.flex-container__autora img{
+    border-radius: 100%;
+}
+
+
+
+/*pagina tipos-robots*/
+
+#tipos-robots {
+  width: 50vw;
+}
+.flex-container--background {
+  background-color: #eeeeee;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  border-left: 3px solid var(--color-resaltado);
+
+}
+.flex-container--background p:last-child{
+    margin-top: 0;
+    margin-bottom: 2vh;
+}
+
+.flex-container--inline{
+   display: inline;
+   font-family: var(--fuente-parrafos);
+   color: var(--text-color);
+   font-size: 16px;
+}
+.flex-container__titulo-pagina {
+  font-size: 30px;
+  align-self: center;
+  font-family: var(--fuente-titulos);
+  color: var(--text-color);
+}
+
+
+/*pagina robots de ficciòn*/
+.flex-contianer__imagenFiccion {
+  width: 50%;
+  align-self: center;
+}
+.flex-container__pie-robot {
+  align-self: center;
+}
+
+@media (min-width: 800px) {
+  .flex-container__titulo-pagina {
+    text-align: center;
+  }
+  .flex-container__parrafo--centrado {
+    text-align: center;
+  }
+  /*pagina tipos*/
+  #tipos-robots {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  #articulo {
+    width: 70vw;
+  }
+
+  /*pagina tipos*/
+  #tipos-robots {
+    width: 60vw;
+  }
+  /*robots-ficcion página*/
+  #robots-ficcion {
+    width: 60vw;
+  }
+}
