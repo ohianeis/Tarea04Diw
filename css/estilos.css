@@ -85,7 +85,7 @@ a {
     font-size: 28px;
     font-family: var(--fuente-titulos);
     font-weight: 500;
-   color: var(--fuente-parrafos);
+   color: var(--text-color);
   }
   
 /*Estilos generales - zona cabecera*/
