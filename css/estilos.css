@@ -150,6 +150,8 @@ footer {
   }
   #footer__parrafo {
     color: var(--text-color-dos);
+    padding-left:2vw;
+    padding-rigth:2vw;
    
   }
 
