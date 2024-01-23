@@ -123,13 +123,7 @@ a {
 #cabecera__menuItems li:hover {
   border: 3px solid var(--color-resaltado);
   box-shadow: 1px 1px 1px 1px var(--color-resaltado);
-  transform: scale(
-    1.25
-  ); /*transformo escala le hago mas grande al pasar encima*/
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  -o-transform: scale(1.25);
+ 
 }
 #cabecera__menuItems li a {
   color: var(--text-color-dos);
@@ -281,6 +275,15 @@ footer {
   .flex-container__parrafo--centrado {
     text-align: center;
   }
+  #cabecera__menuItems li:hover {
+  transform: scale(
+    1.25
+  ); /*transformo escala le hago mas grande al pasar encima*/
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+}
   /*pagina tipos*/
   #tipos-robots {
     width: 50vw;
